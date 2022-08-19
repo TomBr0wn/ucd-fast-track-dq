@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-top-6">
+      Apply for WoC Prototype
+    </h1>
+    
+    
+    <!----------- LEGAL REP JOURNEY SPRINT 2  - 17 AUG to 31 AUG ------------->
+    
+    <div class="moj-timeline">
+      
+      <div class="moj-timeline__item">
+
+        <div class="moj-timeline__header">
+          <h2 class="moj-timeline__title">Version 11: </h2>
+
+          <p class="moj-timeline__byline">Sprint 2</p>
+
+        </div>
+
+        <p class="moj-timeline__date">
+          <time datetime="2019-06-14T14:01:00.000Z">17rd August - 31th August 2022</time>
+        </p>
+
+        <div class="moj-timeline__description">
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li class="govuk-!-font-weight-bold">
+              CURRENT SPRINT
+            </li>
+            <li>
+              Fast Track DQ Journey (Previous prototype on Figma)
+            </li>
+          </ul>
+          <a class="govuk-button govuk-button--primary" href="/v11/task-list">Start Prototype</a>
+          <!-- <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled" data-module="govuk-button">
+            Start Prototype
+          </button> -->
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

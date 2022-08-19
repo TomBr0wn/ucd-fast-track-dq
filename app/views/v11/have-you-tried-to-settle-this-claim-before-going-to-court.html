@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "choose-warrant-or-writ-of-control"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Have you tried to settle this claim before going to court?</h1>
+    <p class="govuk-body">Both parties must take certain steps before going to court. These steps are:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>discuss the claim and negotiate with each other</li>
+      <li>try to reach an agreement about repaying the debt  </li>
+      <li>consider another form of dispute resolution, such as mediation </li>
+    </ul>
+
+    <form action="tried-to-settle-before-court" method="post" class="form">
+      {{ govukRadios({
+
+        idPrefix: "tried-to-settle",
+        name: "tried-to-settle",
+        
+        items: [
+          {
+            value: "Yes",
+            text: "Yes"
+          },
+          {
+            value: "No",
+            text: "No"
+          }
+        ]
+      }) }}
+
+
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+    </form>
+
+    <!-- {% include "includes/contact-for-help.html" %} -->
+
+  </div>
+</div>
+
+{% endblock %}
